@@ -1,0 +1,24 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -e ".[dev]"
+      # Offline: every metric is tested against hand-computed values on
+      # designed return series, and the report is rendered from synthetic
+      # prices. CI never contacts FRED.
+      - run: pytest
+      - run: python -m prr sample --out /tmp/sample

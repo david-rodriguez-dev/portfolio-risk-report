@@ -1,0 +1,17 @@
+{
+  "_comment": "Asset-class proxies from FRED (daily levels, no API key). Indices are price-only and not investable; the point is the analytics, not the allocation. DGS10 is a yield and is turned into a total-return index by repricing a par bond daily.",
+  "name": "Multi-asset proxy portfolio",
+  "source": "fred",
+  "start": "2016-10-01",
+  "risk_free_rate": 0.04,
+  "rebalance": "daily",
+  "benchmark": "SP500",
+  "assets": {
+    "SP500":        { "weight": 0.40, "label": "S&P 500" },
+    "NASDAQCOM":    { "weight": 0.15, "label": "Nasdaq Composite" },
+    "DJIA":         { "weight": 0.10, "label": "Dow Jones Industrial" },
+    "DGS10":        { "weight": 0.25, "label": "10y Treasury (par-bond proxy)", "transform": "bond_total_return", "maturity": 10 },
+    "DCOILBRENTEU": { "weight": 0.05, "label": "Brent crude" },
+    "DEXUSEU":      { "weight": 0.05, "label": "EUR/USD" }
+  }
+}
