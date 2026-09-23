@@ -7,7 +7,7 @@ self-contained HTML file. Numerics in numpy/pandas as pure functions, every
 one of them tested against a hand-computed answer; charts drawn in inline
 SVG with no plotting library.
 
-[![ci](https://github.com/david-rodriguez-dev/portfolio-risk-report/actions/workflows/ci.yml/badge.svg)](https://github.com/david-rodriguez-dev/portfolio-risk-report/actions/workflows/ci.yml)
+[![ci](https://github.com/davrod-dev/portfolio-risk-report/actions/workflows/ci.yml/badge.svg)](https://github.com/davrod-dev/portfolio-risk-report/actions/workflows/ci.yml)
 
 Data comes from FRED's keyless CSV endpoint (daily index levels), from any
 wide CSV of prices you provide, or from a deterministic synthetic generator
@@ -16,7 +16,7 @@ so the whole thing runs — and is tested in CI — without a network.
 ## Quickstart
 
 ```bash
-git clone https://github.com/david-rodriguez-dev/portfolio-risk-report
+git clone https://github.com/davrod-dev/portfolio-risk-report
 cd portfolio-risk-report
 pip install -e ".[dev]"
 
@@ -30,7 +30,7 @@ inline CSS, inline SVG, no scripts.
 
 **See one now:** [`examples/sample_report.html`](examples/sample_report.html)
 is the synthetic sample committed to the repo
-([rendered via htmlpreview](https://htmlpreview.github.io/?https://github.com/david-rodriguez-dev/portfolio-risk-report/blob/main/examples/sample_report.html)).
+([rendered via htmlpreview](https://htmlpreview.github.io/?https://github.com/davrod-dev/portfolio-risk-report/blob/main/examples/sample_report.html)).
 
 ## What the report contains
 
@@ -206,4 +206,4 @@ MIT. Index data is published by the Federal Reserve Bank of St. Louis
 
 ---
 
-David Rodriguez · [github.com/david-rodriguez-dev](https://github.com/david-rodriguez-dev)
+David Rodriguez · [github.com/davrod-dev](https://github.com/davrod-dev)
